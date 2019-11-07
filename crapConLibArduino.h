@@ -3,10 +3,9 @@
 #include "Arduino.h"
 class crapConLibArduino{
   public:
-    crapConLibArduino(int pin);
-    void dot();
-    void dash();
+    crapConLibArduino(int, void (*)(uint8_t[],uint8_t) );
   private:
-    int _pin;
+    int pinDataIn;
+	void (*onRecieve)(uint8_t[],uint8_t);
 };
 #endif

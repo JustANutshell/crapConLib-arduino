@@ -1,18 +1,8 @@
 #include "Arduino.h"
 #include "crapConLibArduino.h"
-crapConLibArduino::crapConLibArduino(int pin){
-  pinMode(pin, OUTPUT);
-  _pin = pin;
-}
-void crapConLibArduino::dot(){
-  digitalWrite(_pin, HIGH);
-  delay(250);
-  digitalWrite(_pin, LOW);
-  delay(250);  
-}
-void crapConLibArduino::dash(){
-  digitalWrite(_pin, HIGH);
-  delay(1000);
-  digitalWrite(_pin, LOW);
-  delay(250);
+crapConLibArduino::crapConLibArduino(int pinDataIn, void (*function)(uint8_t[],uint8_t) ){
+  pinMode(pinDataIn,INPUT);
+  pinDataIn=pinDataIn;
+  // in trigger function: if(!_onRecieve){return;}
+  onRecieve=function;
 }

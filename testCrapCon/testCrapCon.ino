@@ -1,13 +1,10 @@
 #include <crapConLibArduino.h>
 
-void Funktion()
-{
+void crapConRecive(uint8_t content[],uint8_t contentLength){
 }
-crapConLibArduino test(13);
+crapConLibArduino testCon(10,crapConRecive);
 void setup(){}
 void loop(){
-  test.dot();
-  test.dash();
   delay(1000);
 }
 
