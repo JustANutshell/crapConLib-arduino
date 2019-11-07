@@ -1,2 +1,2 @@
-# crapConLib-arduino
+# crapConLibArduino
 ...
